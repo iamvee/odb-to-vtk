@@ -176,7 +176,7 @@ class ODB2VTK:
 		self.odbFileNameNoExt = self.odbFileName.split(".")[0] + suffix
 		self.odbPath = os.path.dirname(fileFullName)
 
-		self.odb = utilities.ReadableOdb(self.fileFullName)
+		self.odb = ReadableOdb(self.fileFullName)
 		# private variables
 		# nodes and elements map are nested dictionary
 		# {'instanceName': {'nodeLabel1': 0, 'nodeLabel1': 0, ...}, .....}
