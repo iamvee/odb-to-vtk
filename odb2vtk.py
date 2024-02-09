@@ -30,6 +30,8 @@
 
 # ODB2VTK class to access the data inside odb file and write it into vtu
 
+import utilities
+
 #import necessary modules to handle Abaqus output database, files and string
 import numpy as np
 from odbAccess import *
@@ -543,9 +545,9 @@ class ODB2VTK:
 			np.savetxt(f, data, '%f', ',')
 
 	def GetExportFileName(self, filName):
-		if not os.path.exists(self.odbPath + '\\' + self.odbFileNameNoExt):
-			os.mkdir(self.odbPath + '\\' + self.odbFileNameNoExt)
-		return self.odbPath + '\\' + self.odbFileNameNoExt + '\\' + filName
+		if not os.path.exists(self.odbPath + '/' + self.odbFileNameNoExt):
+			os.mkdir(self.odbPath + '/' + self.odbFileNameNoExt)
+		return self.odbPath + '/' + self.odbFileNameNoExt + '/' + filName
 
 if __name__ == "__main__":
 
